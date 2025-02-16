@@ -1,122 +1,52 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 7em;
-  padding: 3em;
-  will-change: filter;
-  transition: filter 300ms ease-in-out;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Login page styling */
+.login-page {
+    text-align: center;
+    margin: 20px;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-body {
-  background: linear-gradient(45deg, #df7a7a, #d6a15b);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-header {
-  text-align: center;
-  padding: 20px;
-}
-
-.nav-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin: 20px 20px 20px 10px;
-}
-
-button {
-  padding: 10px 10px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  background-color: #392302;
-  color: white;
-  margin-bottom: 15px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #afc6a7;
-}
-
-button:active {
-  background-color: #2a3d29;
-}
-
-button:focus {
-  outline: 2px solid #4b6345;
-  outline-offset: 4px;
-}
-
-button.small {
-    width: 20%;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-input:focus {
-  border-color: #4b6345;
-  box-shadow: 0 0 5px rgba(75, 99, 69, 0.5);
-}
-
-@media (max-width: 768px) {
-  .nav-buttons {
+  
+  .buttons {
+    display: flex;
     flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
   }
-
+  
+  /* Button Styling */
   button {
-    width: 100%;
-    margin-bottom: 10px;
+    padding: 20px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
   }
-}
+  
+  /* Button off state (default color) */
+  .button-off {
+    background-color: #392302;  /* Default color for OFF state */
+    color: white;
+  }
+  
+  /* Button on state (active color) */
+  .button-on {
+    background-color: #2a3d29;  /* Green color for ON state */
+    color: white;
+  }
+  
+  /* Optional hover and focus styling */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  button:focus {
+    outline: 2px solid #4b6345;
+    outline-offset: 4px;
+  }
+  
+  .next-button {
+    background-color: #392302;
+    color: white;
+  }
