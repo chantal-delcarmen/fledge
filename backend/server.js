@@ -37,7 +37,7 @@ db.connect(err => {
 // API Route to Add a New User. Working as tested by Postman.
 app.post('/addUser', (req, res) => {
     const { firstName, lastName, phone, email } = req.body;
-
+    
     const sql = `INSERT INTO Users (FirstName, LastName, Phone, Email) VALUES (?, ?, ?, ?)`;
     db.query(sql, [firstName, lastName, phone, email], (err, result) => {
         if (err) {
@@ -79,6 +79,35 @@ const transporter = nodemailer.createTransport({
         pass: process.env.EMAIL_PASS
     }
 });
+
+// Function to be called for each power-fledge session. Assigns new fledge to current user.
+const powerFledge = (userID) => {
+    const sqlGetRandomTask = `SELECT idTasks, task FROM Tasks ORDER BY RAND() LIMIT 1;`;
+    const sqlInsertTask = `INSERT INTO Users_has_Tasks (Users_idUsers, Tasks_idTasks, Date) VALUES (?, ?, CURDATE());`;
+    
+    db.query(sqlGetRandomTask, (err, taskResults) => {
+        if (err) {
+            console.error('Error fetching random task:', err);
+            return
+        }
+        if (taskResults.length === 0) {
+            console.error('No tasks found in the database.');
+            return
+        };
+
+        const taskId = taskResults[0].idTasks;
+        const taskDescription = taskResults[0].task;
+
+        // Assign the unique task to the user
+        db.query(sqlInsertTask, [userID, taskId], (err) => {
+            if (err) {
+                console.error(`Error assigning task to user ${userID}:`, err);
+            } else {
+                console.log(`Assigned fledge: ${taskDescription} to user ${userID}`)
+                }
+            })
+        });
+    }
 
 // Function to Assign Unique Random Tasks and Email Users. This will be scheduled (see below) to be called every 24 hours.
 const assignAndEmailTasks = () => {
@@ -144,7 +173,6 @@ cron.schedule('0 12 * * *', () => {
 }, {
     timezone: "America/Edmonton"
 });
-
 
 
 

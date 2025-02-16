@@ -1,0 +1,84 @@
+{
+    "fledgeList": [
+        {
+            "fledgeDescription": "Have you sorted out a family doctor?",
+            "fledgeCategory": 3
+        },
+        {
+            "fledgeDescription": "Stay active. Think about ways to incoporate activity into your week.",
+            "fledgeCategory": 3
+        },
+        {
+            "fledgeDescription": "When did you last get your eyes checked? Hopefully you can read this ;) ",
+            "fledgeCategory": 3
+        },
+        {
+            "fledgeDescription": "It's recommended to complete dental cleanings every 6 months.",
+            "fledgeCategory": 3
+        },
+        {
+            "fledgeDescription": "Are you flossing? Tell the truth.",
+            "fledgeCategory": 3
+        },
+        {
+            "fledgeDescription": "How is your cars oil? Oil changes are important every 500000 kilometres.",
+            "fledgeCategory": 4
+        },
+        {
+            "fledgeDescription": "How are your tires looking?",
+            "fledgeCategory": 4
+        },
+        {
+            "fledgeDescription": "Are you tires appropriate? Winter, summer, all-season?",
+            "fledgeCategory": 4
+        },
+        {
+            "fledgeDescription": "A clean car is a clean mind.",
+            "fledgeCategory": 4
+        },
+        {
+            "fledgeDescription": "Do you have an emergency car kit? It's no fun getting stuck.",
+            "fledgeCategory": 4
+        },
+        {
+            "fledgeDescription": "How are your student loans looking? Are your payment amounts reasonable?",
+            "fledgeCategory": 1
+        },
+        {
+            "fledgeDescription": "TFSA accounts are great!",
+            "fledgeCategory": 1
+        },
+        {
+            "fledgeDescription": "Retirement may be a while away, but it doesn't hurt to get a head start. Opening a RRSP is a great first step.",
+            "fledgeCategory": 1
+        },
+        {
+            "fledgeDescription": "How's your credit balance? Pay it off every month to keep your credit score healthy.",
+            "fledgeCategory": 1
+        },
+        {
+            "fledgeDescription": "Do you really use all your subscription services? If not, save more of your hard-earned money.",
+            "fledgeCategory": 1
+        },
+        {
+            "fledgeDescription": "When's the last time you changed your furnace filter? Change it every 6 months for better efficiency.",
+            "fledgeCategory": 2
+        },
+        {
+            "fledgeDescription": "How's your lint filter. Clear it out regularly to avoid catastrophic fire risk.",
+            "fledgeCategory": 2
+        },
+        {
+            "fledgeDescription": "Eavestrophs, gutters... Whatever you call them, it's important to have them reasonably clear.",
+            "fledgeCategory": 2
+        },
+        {
+            "fledgeDescription": "Are your fire alarms all working?",
+            "fledgeCategory": 2
+        },
+        {
+            "fledgeDescription": "Carbon monoxide is called the silent killer. Do you have any detectors in place?",
+            "fledgeCategory": 2
+        }
+    ]
+}
