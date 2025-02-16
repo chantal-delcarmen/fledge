@@ -1,0 +1,26 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.task-flipper {
+    background-color: $accent;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 300px;
+    height: 100px;
+    margin: 20px auto;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    transition: transform 0.7s ease-in-out;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    
+    &.flip {
+        transform: rotateX(360deg);
+    }
+}
