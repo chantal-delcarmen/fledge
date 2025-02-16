@@ -4,20 +4,20 @@ import "./HomePage.scss";
 import axios from "axios";
 
 const HomePage = () => {
-const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useState([]); // State to store tasks
 
   const getUserTasks = async () => {
     try {
       const response = await axios.get('http://localhost:5000/user-tasks/1');
-      return response.data
+      setTasks(response.data);  // Update tasks state with fetched data
     } catch (error) {
-      console.log('error retrieving user tasks', error)
+      console.log('Error retrieving user tasks', error);
     }
-  }
+  };
 
-  useEffect(()=> {
-    setTasks(response.data)
-  })
+  useEffect(() => {
+    getUserTasks(); // Call the function to fetch tasks on component mount
+  }, []); // Empty dependency array to run once when the component mounts
 
   return (
     <section className="homepage">
@@ -29,12 +29,12 @@ const [tasks, setTasks] = useState([])
         </h2>
       </div>
       <ul className="homepage__list">
-      {tasks.map((task, index) => {
-        <li className="homepage__item" key={index}>
-          <p className="homepage__text">`${task}`</p>
-        <div className="homepage__check"></div>
-    </li>
-      })}
+        {tasks.map((task, index) => (
+          <li className="homepage__item" key={index}>
+            <p className="homepage__text">{task}</p>  {/* Render task */}
+            <div className="homepage__check"></div>
+          </li>
+        ))}
       </ul>
     </section>
   );
