@@ -1,5 +1,8 @@
-function GenerateButton({onClick}) {
-    return <button>Generate New</button>;
-}
+import './GenerateButton.scss';
 
-export default GenerateButton;
+function GenerateButton({ onClick }) {
+    return <button onClick={onClick} >Generate New</button>;
+  }
+  
+  export default GenerateButton;
+  

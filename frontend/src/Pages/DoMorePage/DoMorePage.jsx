@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TaskFlipper from "../../Components/TaskFlipper/TaskFlipper";
 import GenerateButton from "../../Components/Button/GenerateButton";
-// import './DoMore.scss'
+import "./DoMore.scss";
 
 function DoMorePage() {
     const task = [
