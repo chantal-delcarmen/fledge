@@ -6,7 +6,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const navigate = useNavigate();  // useNavigate hook to handle navigation
+  const navigate = useNavigate(); 
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
@@ -16,9 +16,9 @@ const Login = () => {
       return;
     }
 
-    // Mock login validation
+    // Test login
     if (email === 'user@example.com' && password === 'password') {
-      navigate('/wheel');  // Navigate to Dashboard page
+      navigate('/wheel');  // Navigate to table or wheel page
     } else {
       setErrorMessage('Invalid email or password');
     }
