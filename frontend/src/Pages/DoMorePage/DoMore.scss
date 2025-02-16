@@ -1,0 +1,28 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.domorepage {
+    &__information {
+        padding: 1rem 2rem;
+    }
+    &__list {
+        padding: 1rem 2rem;
+    }
+
+    &__item {
+        @include flex-center(row, space-between);
+        padding: 1rem;
+        border-bottom: 2px solid $accent;
+    }
+
+    &__text {
+        text-wrap: stable;
+    }
+
+    &__check {
+        height: 32px;
+        width: 32px;
+        background-color: $primary-text;
+        border-radius: 25px;
+    }
+}
