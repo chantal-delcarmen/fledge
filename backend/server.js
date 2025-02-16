@@ -48,7 +48,7 @@ app.post('/addUser', (req, res) => {
     });
 });
 
-// API Route to display all tasks/fledges for specified user. Working as tested by Postman.
+// API Route to get user name correponding to user_id. This feels redundant so need to fix later.
 app.get('/getUserName', (req, res) => {
     const userId = req.params.userId;
 
@@ -63,7 +63,7 @@ app.get('/getUserName', (req, res) => {
     });
 });
 
-// API Route to get user name correponding to user_id. This feels redundant so need to fix later.
+// API Route to display all tasks/fledges for specified user. Working as tested by Postman.
 app.get('/users/:userId', (req, res) => {
     const userId = req.params.userId;
 
@@ -188,7 +188,6 @@ cron.schedule('0 12 * * *', () => {
 }, {
     timezone: "America/Edmonton"
 });
-
 
 
 // Start Server
