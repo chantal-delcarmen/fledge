@@ -49,7 +49,22 @@ app.post('/addUser', (req, res) => {
 });
 
 // API Route to display all tasks/fledges for specified user. Working as tested by Postman.
-app.get('/user-tasks/:userId', (req, res) => {
+app.get('/getUserName', (req, res) => {
+    const userId = req.params.userId;
+
+    const sql = `SELECT (FirstName, LastName) FROM Users WHERE idUsers = ?userID_from_UI`;
+
+    db.query(sql, [userId], (err, results) => {
+        if (err) {
+            console.error('Error fetching user name:', err);
+            return res.status(500).json({ error: 'Database error' });
+        }
+        res.status(200).json(results);
+    });
+});
+
+// API Route to get user name correponding to user_id. This feels redundant so need to fix later.
+app.get('/users/:userId', (req, res) => {
     const userId = req.params.userId;
 
     const sql = `
