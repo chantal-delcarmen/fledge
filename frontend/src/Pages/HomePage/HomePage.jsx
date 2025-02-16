@@ -1,8 +1,10 @@
+import { useEffect, useState } from "react";
 import Header from "../../Components/Header/Header";
 import "./HomePage.scss";
 import axios from "axios";
 
 const HomePage = () => {
+const [tasks, setTasks] = useState([])
 
   const getUserTasks = async () => {
     try {
@@ -13,7 +15,9 @@ const HomePage = () => {
     }
   }
 
-  getUserTasks();
+  useEffect(()=> {
+    setTasks(response.data)
+  })
 
   return (
     <section className="homepage">
@@ -25,7 +29,7 @@ const HomePage = () => {
         </h2>
       </div>
       <ul className="homepage__list">
-      {response.data.map((task, index) => {
+      {tasks.map((task, index) => {
         <li className="homepage__item" key={index}>
           <p className="homepage__text">`${task}`</p>
         <div className="homepage__check"></div>
