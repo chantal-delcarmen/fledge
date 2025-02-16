@@ -99,6 +99,39 @@ CREATE TABLE IF NOT EXISTS `Users_has_Tasks` (
     ON UPDATE NO ACTION
 ) ENGINE = InnoDB;
 
+----------------------Starting insert statements-----------------------------
+INSERT INTO Users (FirstName, LastName, Email, Phone)
+VALUES 
+    ('Joe', 'Schmo', 'joeschmo@hotmail.com', '5872258732'),
+    ('Judy', 'Gibson', 'judy_gibson@outlook.ca', '4239094267'),
+    ('Edwin', 'Lars', 'lars_mars@shaw.ca', '9802645273');
+
+INSERT INTO Categories (taskType)
+VALUES 
+    ('Finance'),
+    ('Home'),
+    ('Health'),
+    ('Auto'),
+    ('Careers'),
+    ('Self-Care');
+
+INSERT INTO Tasks (task, Categories_idCategories)
+VALUES 
+    ('Regularly check your drying machine lint filter.', 2),
+    ('Does your vehicle need an oil change?', 4),
+    ('Consider opening a TFSA account.', 1);
+
+
+INSERT INTO Users_has_Tasks (Users_idUsers, Tasks_idTasks, Date)
+VALUES 
+    (1, 2, '2025-01-01'),
+    (1, 3, '2025-01-02'),
+    (3, 1, '2024-12-20'),
+    (2, 1, '2024-11-29');
+
+
+
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
