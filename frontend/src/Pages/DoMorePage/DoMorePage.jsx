@@ -12,10 +12,10 @@ function DoMorePage() {
         'Meal prep for the week.'
     ];
 
-    const [currentTask, setCurrentTask] = useState(tasks[0]);
+    const [currentTask, setCurrentTask] = useState(task[0]);
 
     const getRandomTask = () => {
-        const randomTask = tasks [Math.floor(Math.random() * tasks.length)];
+        const randomTask = task[Math.floor(Math.random() * task.length)];
         setCurrentTask(randomTask);
     }
 
