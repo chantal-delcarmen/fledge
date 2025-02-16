@@ -9,6 +9,7 @@ const HomePage = () => {
   const getUserTasks = async () => {
     try {
       const response = await axios.get('http://localhost:5000/user-tasks/1');
+      console.log(response.data)
       setTasks(response.data);  // Update tasks state with fetched data
     } catch (error) {
       console.log('Error retrieving user tasks', error);
@@ -31,7 +32,7 @@ const HomePage = () => {
       <ul className="homepage__list">
         {tasks.map((task, index) => (
           <li className="homepage__item" key={index}>
-            <p className="homepage__text">{task}</p>  {/* Render task */}
+            <p className="homepage__text">{task.task}</p>  {/* Render task */}
             <div className="homepage__check"></div>
           </li>
         ))}

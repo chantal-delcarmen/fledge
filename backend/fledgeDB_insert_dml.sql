@@ -97,6 +97,15 @@ INSERT INTO Users (FirstName, LastName, Phone, Email) VALUES
     ('Liam', 'Anderson', '8256784321', 'liam.anderson@example.com'),
     ('Olivia', 'Brown', '2508765432', 'olivia.brown@example.com');
 
+-------------------------------Populate categories table------------------------------------
+INSERT INTO Categories (taskType) VALUES
+    ('Finance'),
+    ('Home'),
+    ('Health'),
+    ('Auto'),
+    ('Careers'),
+    ('Self-care');
+
 --------------------------------Assign fledges to populate table----------------------------
 INSERT INTO Users_has_Tasks (Date, Users_idUsers, Tasks_idTasks) VALUES
     -- Assign tasks to User 1 (Emily Johnson)
