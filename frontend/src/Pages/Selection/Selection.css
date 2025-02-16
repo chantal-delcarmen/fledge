@@ -1,0 +1,53 @@
+/* Selection page styling */
+.selection-page {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Button Styling */
+  button {
+    padding: 20px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button off state (default color) */
+  .button-off {
+    background-color: #392302;  /* Default color for OFF state */
+    color: white;
+  }
+  
+  /* Button on state (active color) */
+  .button-on {
+    background-color: #2a3d29;  /* Green color for ON state */
+    color: white;
+  }
+  
+  /* Optional hover and focus styling */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  button:focus {
+    outline: 2px solid #4b6345;
+    outline-offset: 4px;
+  }
+  
+  .next-button {
+    background-color: #392302;
+    color: white;
+  }
+  
