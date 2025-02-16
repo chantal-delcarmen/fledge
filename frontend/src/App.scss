@@ -1,0 +1,27 @@
+@use './styles/variables' as *;
+@use './styles/mixins' as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+    background-color: $primary-background;
+    color: $primary-text;
+}
+
+h1 {
+    font-size: 28px;
+    // line-height: 0.035px;
+}
+
+h2 {
+    font-size: 20px;
+    // font-weight: ;
+    // line-height: 0.05px;
+}
