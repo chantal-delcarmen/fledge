@@ -24,6 +24,13 @@ VALUES
         ?category_id_from_UI
     );
 
+--Get first and last name of user from specified user ID
+SELECT 
+    (FirstName, LastName)
+FROM 
+    Users
+WHERE idUsers = ?userID_from_UI
+
 ---------------------------------Operations for tasks--------------------------------------
 
 --Insert statement for a new task with category
@@ -89,7 +96,7 @@ INSERT INTO Tasks (task, Categories_idCategories) VALUES
     ('Are your fire alarms all working?', 2),
     ('Carbon monoxide is called the silent killer. Do you have any detectors in place?', 2);
 
---------------------------------Populate the users table ----------------------------------
+--------------------------------Populate the users table next ----------------------------------
 INSERT INTO Users (FirstName, LastName, Phone, Email) VALUES
     ('Emily', 'Johnson', '5871234567', 'emily.johnson@example.com'),
     ('Michael', 'Smith', '4039876543', 'michael.smith@example.com'),
@@ -97,7 +104,7 @@ INSERT INTO Users (FirstName, LastName, Phone, Email) VALUES
     ('Liam', 'Anderson', '8256784321', 'liam.anderson@example.com'),
     ('Olivia', 'Brown', '2508765432', 'olivia.brown@example.com');
 
--------------------------------Populate categories table------------------------------------
+-------------------------------Populate categories table next------------------------------------
 INSERT INTO Categories (taskType) VALUES
     ('Finance'),
     ('Home'),
