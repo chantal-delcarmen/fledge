@@ -137,7 +137,7 @@ const assignAndEmailTasks = () => {
     });
 };
 
-// Schedule the task to run every 24 hours at midnight
+// Schedule the task to run every 24 hours at noon
 cron.schedule('0 12 * * *', () => {
     console.log('Running scheduled unique task assignment & email...');
     assignAndEmailTasks();
