@@ -1,0 +1,12 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.header {
+@include flex-center(row, space-between);
+padding: 1rem 2rem;
+border-bottom: 2px solid $accent;
+
+    &__logo {
+        color: $primary-text;
+    }
+}
